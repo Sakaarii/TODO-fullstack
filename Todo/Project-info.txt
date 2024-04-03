@@ -1,0 +1,15 @@
+Project info for Fullstack TODO application project 
+
+TODO list:
+
+- Design an interaface and functionality for the adding, moving and customizing elements in the to do list.
+-- Has a bar at the top to type in new todos.
+-- The application has the ability to put todos into specific "collections" and this can be chosen from the left of the bar 
+   and a new one can be created from a button on the left of the bar.
+-- Every todo has a completion button and the ability to move up or down using mouse.
+-- Every todo has a displayed title and date-of-addition, when clicked on a specific part displays also the description if given.
+-- has a bar on the left that displays the history of completed todos and the date-of-completion.
+-- When compliting a todo the application plays a satisfying sound and plays a small animation or indication of a complated item.
+-- Frontend connects to a backend that fetches the current todo-object and the history-todo-object and uses these to display information.
+-- Backend connects to the database (MongoDB) and stores data in there.
+-- OPTIONAL** in the end connect the whole application to the internet as an authenticated user.

@@ -1,0 +1,94 @@
+@keyframes hover {
+    from {
+        height: 50px;
+        border-top-left-radius: 20px;
+    }
+    to {
+        height: 100px;
+        border-top-left-radius: 20px;
+    }
+}
+
+@keyframes opacity {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+.TodosContainer{
+    display: flexbox;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.TodoElement{
+    margin-top: 20px;
+    background-color: rgb(223, 101, 150);
+    width: fit-content;
+    height: auto;
+    max-height: 50px;
+    border: solid 2px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 20px;
+}
+.TodoElement:hover{
+    animation-name: hover;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    background-color: rgb(252, 131, 190);
+    max-height: 100px;
+    height: 100px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 25px;
+
+    .TodoDescription{
+        animation-name: opacity;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+        opacity: 100%;
+    }
+}
+.TodoObject{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 10px;
+    text-wrap:nowrap;
+}
+
+.DeleteButton{
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 30px;
+    border:solid 3px;
+    border-color: white;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.DeleteButton:hover{
+    background-color: rgb(223, 101, 150);
+    font-size: larger;
+    color: white;
+}
+
+.TodoBar{
+    width: 500px;
+    height: 30px;
+    border-radius: 15px;
+    border:solid 2px;
+    text-align: center;
+    font-size: large;
+}
+
+.TodoDescription{
+    position: absolute;
+    margin-left: 10px;
+    opacity: 0%;
+}
+
+.TodoDescText{
+    color: rgba(56, 54, 54);
+}
