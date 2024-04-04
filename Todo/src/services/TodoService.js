@@ -1,6 +1,6 @@
 import axios from 'axios'
-const todosURL = 'http://localhost:3001/api/todo'
-const deletedURL = 'http://localhost:3001/api/deleted'
+const todosURL = '/api/todo'
+const deletedURL = '/api/deleted'
 
 const getAllDeleted = ()=>{
     return axios.get(deletedURL)
