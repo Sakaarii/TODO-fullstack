@@ -41,6 +41,8 @@
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    padding: 2px;
+    overflow: scroll;
 }
 .TodoElement{
     margin-top: 20px;
@@ -48,6 +50,7 @@
     width: 500px;
     height: auto;
     max-height: 50px;
+    max-width: 500px;
     border: solid 2px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -61,7 +64,7 @@
     max-height: 100px;
     height: 100px;
     border-bottom-right-radius: 20px;
-    border-top-right-radius: 25px;
+    border-top-right-radius: 26px;
 
     .TodoDescription{
         animation-name: opacity;
@@ -77,8 +80,13 @@
     margin-left: 10px;
     text-wrap:nowrap;
 }
+.TodoText{
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .DeleteButton{
+    position: relative;
     height: 50px;
     width: 50px;
     min-width: 50px;
@@ -87,7 +95,6 @@
     border:solid 3px;
     border-color: white;
     background-color: white;
-    margin-left: 10px;
 }
 
 .DeleteButton:hover{
@@ -103,6 +110,10 @@
     border:solid 2px;
     text-align: center;
     font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.TodoBar:focus{
+    outline:solid 2px rgb(249, 89, 188);
 }
 
 .TodoDescription{
@@ -152,23 +163,33 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 20px;
+    width: 25px;
     height: 100%;
     background-color: rgb(223, 101, 150);
     border-right: solid 2px;
     z-index: 4000;
+    overflow-wrap: break-word;
     .NavTitle{
+        margin-top: 5px;
         writing-mode: vertical-rl;
         text-orientation: mixed;
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: larger;
+        font-size: large;
     }
 }
+.NavHistory{
+    display: none;
+}
+.NavDiv{
+    display: flex;
+    justify-content: center;
+}
+
 
 .NavBar:hover{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     position: fixed;
     left: 0;
     top: 0;
@@ -191,4 +212,25 @@
         animation-duration: 0.2s;
         animation-timing-function: ease-in;
     }
+    .NavHistory{
+        display: inline;
+        opacity: 100%;
+        scale: 100%;
+        text-wrap: wrap;
+        text-overflow: break-word;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation-name: opacity;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in;
+    }
+    .NavDiv{
+        display: inline;
+        overflow-y:scroll;
+        margin-left: 3vw;
+        margin-right: 2vw;
+    }
+}
+
+.HistoryText{
+    text-decoration: line-through;
 }
