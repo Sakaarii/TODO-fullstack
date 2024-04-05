@@ -18,6 +18,11 @@ const createDeleted = newObject =>{
     return axios.post(deletedURL, newObject)
 }
 
+const updateTodo = (id, newObject) =>{
+    return axios.put(`${todosURL}/${id}`, newObject)
+}
+
+
 const deleteTodo = (id) =>{
     return axios.delete(`${todosURL}/${id}`)
 }
@@ -27,5 +32,6 @@ export default {
     getAllTodos: getAllTodos,
     createTodo: createTodo,
     createDeleted: createDeleted,
-    deleteTodo: deleteTodo
+    deleteTodo: deleteTodo,
+    updateTodo: updateTodo
 }

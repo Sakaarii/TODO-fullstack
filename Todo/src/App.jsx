@@ -79,7 +79,11 @@ const App =()=> {
     event.preventDefault()
     const copy = [...todos]
     copy[index].editable = !todos[index].editable
-    setTodos(copy)
+    TodoService
+      .updateTodo(todos[index].id, copy[index])
+      .then(response=>{
+        setTodos(copy) 
+      })
   }
 
   // Handles the description of the todo
@@ -106,7 +110,7 @@ const App =()=> {
           </div>
         </div>
       </nav>
-      <div className="</div>TodoAppContainer">
+      <div className="TodoAppContainer">
         <div className="TodosContainer">
           <Input handleSubmit={handleSubmit} input={input} onInputChange={onInputChange} />
           {todos.map((element,index)=>{
