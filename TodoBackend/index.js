@@ -1,10 +1,12 @@
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
 const Password = process.env.PASSWORD
 
-mongoose.connect(`mongodb+srv://samuelpaunonenn:${Password}@cluster0.sgbvsem.mongodb.net/todoObjects?retryWrites=true&w=majority&appName=Cluster0`)
+
+mongoose.connect(`mongodb+srv://samuelpaunonenn:${Password}@cluster0.mhu9ulf.mongodb.net/todoObjects?retryWrites=true&w=majority&appName=Cluster0`)
 
 TodoObject = mongoose.model('TodoObject', {
     name: String,
@@ -18,7 +20,6 @@ DeleteObject = mongoose.model('DeleteObject', {
     name: String
 })
 
-TodoObject.findOneAndDelete
 
 app.use(express.json())
 app.use(cors())
