@@ -2,8 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
+const Password = process.env.PASSWORD
 
-mongoose.connect("mongodb+srv://samuelpaunonenn:duuo66655@cluster0.sgbvsem.mongodb.net/todoObjects?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(`mongodb+srv://samuelpaunonenn:${Password}@cluster0.sgbvsem.mongodb.net/todoObjects?retryWrites=true&w=majority&appName=Cluster0`)
 
 TodoObject = mongoose.model('TodoObject', {
     name: String,
